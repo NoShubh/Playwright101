@@ -18,6 +18,6 @@ def test_simple_form_demo(playwright):
     page.click("id=showInput")
 
     expect(page.inner_text("id=message")).to_equal(message)
-    page.wait_for_timeout = (3000)
+    page.wait_for_timeout(3000)
 
     browser.close()
